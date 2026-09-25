@@ -27,9 +27,9 @@
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
 | 001 | Python Environment & Virtual Environment Setup | 🟢 | None | `chore/initial-setup` | Python 3.11+ installed, venv created, pip works inside venv |
-| 002 | VS Code Configuration & Developer Tooling | ⬜ | S001 | `chore/initial-setup` | VS Code settings, extensions installed, Ruff + Mypy configured |
-| 003 | Git Repository Initialization & GitHub Setup | ⬜ | S002 | `chore/initial-setup` | Local repo initialized, .gitignore configured, pushed to GitHub |
-| 004 | Git Workflow Practice & Branching Strategy | ⬜ | S003 | `chore/git-workflow` | Understand branches, commits, PRs; practice feature branch workflow |
+| 002 | VS Code Configuration & Developer Tooling | 🟢 | S001 | `chore/initial-setup` | VS Code settings, extensions installed, Ruff + Mypy configured |
+| 003 | Git Repository Initialization & GitHub Setup | 🟢 | S002 | `chore/initial-setup` | Local repo initialized, .gitignore configured, pushed to GitHub |
+| 004 | Git Workflow Practice & Branching Strategy | 🟢 | S003 | `chore/git-workflow` | Understand branches, commits, PRs; practice feature branch workflow |
 
 ---
 
