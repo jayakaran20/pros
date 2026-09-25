@@ -1,0 +1,25 @@
+{
+  "system": "Smart Crop Assistant",
+  "models": {
+    "crop_recommendation": {
+      "version": "1.0.0-uninitialized",
+      "algorithm": "Pending Milestone 4 & 5",
+      "artifact_file": "crop_model.joblib",
+      "scaler_file": "scaler.joblib",
+      "input_features": [
+        "nitrogen",
+        "phosphorus",
+        "potassium",
+        "temperature",
+        "humidity",
+        "ph",
+        "rainfall"
+      ]
+    },
+    "plant_disease": {
+      "version": "1.0.0-uninitialized",
+      "algorithm": "MobileNetV3 (Pending Milestone 9)",
+      "artifact_file": "plant_mobilenet_v3.pth"
+    }
+  }
+}
