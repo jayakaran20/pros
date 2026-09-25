@@ -1,0 +1,61 @@
+# =============================================================================
+# Smart Crop Assistant — .gitignore
+# =============================================================================
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ----- Virtual Environment -----
+.venv/
+venv/
+env/
+
+# ----- Environment Variables & Secrets -----
+.env
+.env.local
+.env.production
+*.pem
+*.key
+
+# ----- IDE & Editor -----
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ----- OS Generated -----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----- ML Data & Models (too large for Git) -----
+ml_experiments/data/raw/
+ml_experiments/data/processed/
+ml_experiments/saved_models/
+backend/app/ml/artifacts/*.joblib
+backend/app/ml/artifacts/*.pth
+backend/app/ml/artifacts/*.onnx
+!backend/app/ml/artifacts/.gitkeep
+!backend/app/ml/artifacts/metadata.json
+
+# ----- Frontend -----
+node_modules/
+frontend/dist/
+frontend/build/
+
+# ----- Testing & Coverage -----
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# ----- Docker -----
+*.log

@@ -1,0 +1,77 @@
+[project]
+name = "smart-crop-assistant"
+version = "0.1.0"
+description = "AI-powered agriculture application for crop recommendation, yield prediction, and plant disease detection"
+requires-python = ">=3.11"
+
+# =============================================================================
+# RUFF — Linter & Formatter Configuration
+# =============================================================================
+
+[tool.ruff]
+# Target Python version for syntax checking
+target-version = "py311"
+
+# Maximum line length before the formatter wraps lines
+# 88 is the Black standard — widely adopted in the Python ecosystem
+line-length = 88
+
+# Which directories to completely ignore (never lint or format these)
+exclude = [
+    ".venv",
+    "__pycache__",
+    ".git",
+    "node_modules",
+    "ml_experiments/data",
+]
+
+[tool.ruff.lint]
+# Which lint rule sets to enable:
+# E = pycodestyle errors (basic style violations)
+# F = pyflakes (undefined names, unused imports)
+# W = pycodestyle warnings
+# I = isort (import ordering)
+# UP = pyupgrade (suggest modern Python syntax)
+# B = flake8-bugbear (common bug patterns)
+# SIM = flake8-simplify (simplifiable code)
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+
+# Specific rules to ignore (with reasons):
+# E501 = line too long — the formatter handles this, linter doesn't need to
+ignore = ["E501"]
+
+[tool.ruff.format]
+# Use double quotes for strings (consistent with most Python projects)
+quote-style = "double"
+
+# Use 4-space indentation (PEP 8 standard)
+indent-style = "space"
+
+# =============================================================================
+# MYPY — Type Checker Configuration
+# =============================================================================
+
+[tool.mypy]
+# Target Python version
+python_version = "3.11"
+
+# Warn about functions missing return type annotations
+warn_return_any = true
+
+# Warn about unused # type: ignore comments
+warn_unused_configs = true
+
+# Do not fail on missing third-party library type stubs
+# (many ML libraries like scikit-learn don't ship type info yet)
+ignore_missing_imports = true
+
+# =============================================================================
+# PYTEST — Test Runner Configuration (for future sessions)
+# =============================================================================
+
+[tool.pytest.ini_options]
+# Where to find tests
+testpaths = ["backend/tests"]
+
+# Minimum coverage percentage required
+# addopts = "--cov=backend/app --cov-fail-under=80"
