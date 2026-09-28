@@ -39,10 +39,10 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 005 | Backend Project Scaffolding | ⬜ | S004 | `chore/scaffold-backend` | backend/app/ directory tree created with __init__.py files and docstrings |
-| 006 | ML Experiments Directory & Data Management | ⬜ | S005 | `chore/scaffold-ml` | ml_experiments/ directory created, .gitignore for data/models configured |
-| 007 | Frontend Project Initialization | ⬜ | S005 | `chore/scaffold-frontend` | React + Vite + TypeScript project initialized with Tailwind CSS |
-| 008 | Documentation Structure & Project Metadata | ⬜ | S006 | `chore/scaffold-docs` | docs/ structure, README.md stub, .env.example, LICENSE created |
+| 005 | Backend Project Scaffolding | 🟢 | S004 | `chore/scaffold-backend` | backend/app/ directory tree created with __init__.py files and docstrings |
+| 006 | ML Experiments Directory & Data Management | 🟢 | S005 | `chore/scaffold-ml` | ml_experiments/ directory created, .gitignore for data/models configured |
+| 007 | Frontend Project Initialization | 🟢 | S005 | `chore/scaffold-frontend` | React + Vite + TypeScript project initialized with Tailwind CSS |
+| 008 | Documentation Structure & Project Metadata | 🟢 | S006 | `chore/scaffold-docs` | docs/ structure, README.md stub, .env.example, LICENSE created |
 
 ---
 
