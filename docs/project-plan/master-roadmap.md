@@ -52,8 +52,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 009 | Dataset Research & Acquisition | ⬜ | S006 | `feat/crop-dataset` | Dataset downloaded, license verified, stored in ml_experiments/data/raw/ |
-| 010 | Initial Data Inspection & Understanding | ⬜ | S009 | `feat/crop-dataset` | Notebook created showing shape, dtypes, head, describe, null counts |
+| 009 | Dataset Research & Acquisition | 🟢 | S006 | `feat/crop-dataset` | Dataset downloaded, license verified, stored in ml_experiments/data/raw/ |
+| 010 | Initial Data Inspection & Understanding | 🟢 | S009 | `feat/crop-dataset` | Notebook created showing shape, dtypes, head, describe, null counts |
 
 ---
 
@@ -63,10 +63,10 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 011 | Univariate Analysis — Feature Distributions | ⬜ | S010 | `feat/crop-eda` | Histograms and box plots for all 7 features, written observations |
-| 012 | Bivariate Analysis — Correlations & Crop Separation | ⬜ | S011 | `feat/crop-eda` | Correlation matrix, pair plots, per-crop feature comparisons |
-| 013 | Class Distribution & Target Analysis | ⬜ | S012 | `feat/crop-eda` | Class balance verification, label encoding strategy documented |
-| 014 | EDA Summary & Conclusions | ⬜ | S013 | `feat/crop-eda` | Written summary of key insights, feature boundaries for validation |
+| 011 | Univariate Analysis — Feature Distributions | 🟢 | S010 | `feat/crop-eda` | Histograms and box plots for all 7 features, written observations |
+| 012 | Bivariate Analysis — Correlations & Crop Separation | 🟢 | S011 | `feat/crop-eda` | Correlation matrix, pair plots, per-crop feature comparisons |
+| 013 | Class Distribution & Target Analysis | 🟢 | S012 | `feat/crop-eda` | Class balance verification, label encoding strategy documented |
+| 014 | EDA Summary & Conclusions | 🟢 | S013 | `feat/crop-eda` | Written summary of key insights, feature boundaries for validation |
 
 ---
 
