@@ -76,9 +76,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 015 | Understanding Data Leakage & Split Strategy | ⬜ | S014 | `feat/crop-preprocessing` | Concept explained, stratified train/val/test split implemented |
-| 016 | Feature Scaling & Transformation Pipeline | ⬜ | S015 | `feat/crop-preprocessing` | StandardScaler fitted on train only, applied to val/test, pipeline saved |
-| 017 | Label Encoding & Data Validation | ⬜ | S016 | `feat/crop-preprocessing` | Target labels encoded, assertions for data integrity added |
+| 015 | Understanding Data Leakage & Split Strategy | 🟢 | S014 | `feat/crop-preprocessing` | Concept explained, stratified train/val/test split implemented |
+| 016 | Feature Scaling & Transformation Pipeline | 🟢 | S015 | `feat/crop-preprocessing` | StandardScaler fitted on train only, applied to val/test, pipeline saved |
+| 017 | Label Encoding & Data Validation | 🟢 | S016 | `feat/crop-preprocessing` | Target labels encoded, assertions for data integrity added |
 
 ---
 
@@ -88,8 +88,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 018 | Dummy Classifier Baseline | ⬜ | S017 | `feat/crop-ml-baseline` | Stratified dummy classifier trained, baseline metrics recorded |
-| 019 | Logistic Regression Baseline | ⬜ | S018 | `feat/crop-ml-baseline` | Logistic Regression trained, metrics compared to dummy baseline |
+| 018 | Dummy Classifier Baseline | 🟢 | S017 | `feat/crop-ml-baseline` | Stratified dummy classifier trained, baseline metrics recorded |
+| 019 | Logistic Regression Baseline | 🟢 | S018 | `feat/crop-ml-baseline` | Logistic Regression trained, metrics compared to dummy baseline |
 
 ---
 
@@ -99,10 +99,10 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 020 | Decision Tree Classifier | ⬜ | S019 | `feat/crop-model-comparison` | Decision Tree trained, metrics recorded, overfitting analyzed |
-| 021 | Random Forest Classifier | ⬜ | S020 | `feat/crop-model-comparison` | Random Forest trained with cross-validation, metrics recorded |
-| 022 | XGBoost Classifier | ⬜ | S021 | `feat/crop-model-comparison` | XGBoost trained, metrics recorded, comparison table updated |
-| 023 | Hyperparameter Tuning | ⬜ | S022 | `feat/crop-model-tuning` | Best model hyperparameters optimized via GridSearchCV or Optuna |
+| 020 | Decision Tree Classifier | 🟢 | S019 | `feat/crop-model-comparison` | Decision Tree trained, metrics recorded, overfitting analyzed |
+| 021 | Random Forest Classifier | 🟢 | S020 | `feat/crop-model-comparison` | Random Forest trained with cross-validation, metrics recorded |
+| 022 | XGBoost Classifier | 🟢 | S021 | `feat/crop-model-comparison` | XGBoost trained, metrics recorded, comparison table updated |
+| 023 | Hyperparameter Tuning | 🟢 | S022 | `feat/crop-model-tuning` | Best model hyperparameters optimized via GridSearchCV or Optuna |
 
 ---
 
@@ -112,9 +112,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 024 | Comprehensive Evaluation Metrics | ⬜ | S023 | `feat/crop-evaluation` | Macro F1, Log-Loss, per-class precision/recall computed on test set |
-| 025 | Confusion Matrix & Error Analysis | ⬜ | S024 | `feat/crop-evaluation` | Confusion matrix visualized, misclassified classes analyzed |
-| 026 | Model Selection & Decision Documentation | ⬜ | S025 | `feat/crop-evaluation` | Champion model selected with documented reasoning |
+| 024 | Comprehensive Evaluation Metrics | 🟢 | S023 | `feat/crop-evaluation` | Macro F1, Log-Loss, per-class precision/recall computed on test set |
+| 025 | Confusion Matrix & Error Analysis | 🟢 | S024 | `feat/crop-evaluation` | Confusion matrix visualized, misclassified classes analyzed |
+| 026 | Model Selection & Decision Documentation | 🟢 | S025 | `feat/crop-evaluation` | Champion model selected with documented reasoning |
 
 ---
 
@@ -124,9 +124,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 027 | Model Serialization with Joblib | ⬜ | S026 | `feat/crop-serialization` | Model + scaler + metadata serialized to disk with SHA-256 checksum |
-| 028 | Standalone Inference Engine Wrapper | ⬜ | S027 | `feat/crop-serialization` | TabularEngine class loads artifacts and returns predictions from raw input |
-| 029 | Inference Testing & Validation | ⬜ | S028 | `feat/crop-serialization` | Unit tests verify deterministic output, boundary inputs, and latency |
+| 027 | Model Serialization with Joblib | 🟢 | S026 | `feat/crop-serialization` | Model + scaler + metadata serialized to disk with SHA-256 checksum |
+| 028 | Standalone Inference Engine Wrapper | 🟢 | S027 | `feat/crop-serialization` | TabularEngine class loads artifacts and returns predictions from raw input |
+| 029 | Inference Testing & Validation | 🟢 | S028 | `feat/crop-serialization` | Unit tests verify deterministic output, boundary inputs, and latency |
 
 ---
 
