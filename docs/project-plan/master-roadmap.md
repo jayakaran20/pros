@@ -136,10 +136,10 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 030 | Understanding HTTP, REST & FastAPI Concepts | ⬜ | S029 | `feat/fastapi-foundation` | Concepts documented, FastAPI installed, minimal app runs |
-| 031 | Application Factory & Configuration Management | ⬜ | S030 | `feat/fastapi-foundation` | Pydantic BaseSettings config, .env loading, app factory pattern |
-| 032 | Health Check Endpoint | ⬜ | S031 | `feat/fastapi-foundation` | GET /api/v1/health returns system status JSON, tested manually |
-| 033 | Structured Error Handling & Middleware | ⬜ | S032 | `feat/fastapi-foundation` | Global exception handlers, CORS middleware, request ID tracking |
+| 030 | Understanding HTTP, REST & FastAPI Concepts | 🟢 | S029 | `feat/fastapi-foundation` | Concepts documented, FastAPI installed, minimal app runs |
+| 031 | Application Factory & Configuration Management | 🟢 | S030 | `feat/fastapi-foundation` | Pydantic BaseSettings config, .env loading, app factory pattern |
+| 032 | Health Check Endpoint | 🟢 | S031 | `feat/fastapi-foundation` | GET /api/v1/health returns system status JSON, tested manually |
+| 033 | Structured Error Handling & Middleware | 🟢 | S032 | `feat/fastapi-foundation` | Global exception handlers, CORS middleware, request ID tracking |
 
 ---
 
@@ -149,10 +149,10 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 034 | Pydantic Request & Response Schemas | ⬜ | S033 | `feat/crop-api` | CropPredictionRequest and CropPredictionResponse schemas with validators |
-| 035 | Crop Recommendation Service Layer | ⬜ | S034 | `feat/crop-api` | CropService orchestrates inference engine, returns domain response |
-| 036 | Crop Prediction Endpoint | ⬜ | S035 | `feat/crop-api` | POST /api/v1/crops/recommend working, tested via Swagger |
-| 037 | API Testing with httpx TestClient | ⬜ | S036 | `feat/crop-api` | Automated tests: valid input → 200, invalid → 422, model error → 503 |
+| 034 | Pydantic Request & Response Schemas | 🟢 | S033 | `feat/crop-api` | CropPredictionRequest and CropPredictionResponse schemas with validators |
+| 035 | Crop Recommendation Service Layer | 🟢 | S034 | `feat/crop-api` | CropService orchestrates inference engine, returns domain response |
+| 036 | Crop Prediction Endpoint | 🟢 | S035 | `feat/crop-api` | POST /api/v1/crops/recommend working, tested via Swagger |
+| 037 | API Testing with httpx TestClient | 🟢 | S036 | `feat/crop-api` | Automated tests: valid input → 200, invalid → 422, model error → 503 |
 
 ---
 
