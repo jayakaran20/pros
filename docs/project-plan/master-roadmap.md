@@ -162,10 +162,10 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 038 | Relational Database Concepts & SQLAlchemy Setup | ⬜ | S037 | `feat/database` | Concepts taught, SQLAlchemy + Alembic installed, DB engine configured |
-| 039 | Database Models — prediction_records & crop_predictions | ⬜ | S038 | `feat/database` | SQLAlchemy ORM models defined matching Phase 0 schema |
-| 040 | Alembic Migrations — Initial Schema | ⬜ | S039 | `feat/database` | First migration generated and applied, tables verified |
-| 041 | Repository Pattern — Data Access Layer | ⬜ | S040 | `feat/database` | PredictionRepository class for CRUD operations on predictions |
+| 038 | Relational Database Concepts & SQLAlchemy Setup | 🟢 | S037 | `feat/database` | Concepts taught, SQLAlchemy + Alembic installed, DB engine configured |
+| 039 | Database Models — prediction_records & crop_predictions | 🟢 | S038 | `feat/database` | SQLAlchemy ORM models defined matching Phase 0 schema |
+| 040 | Alembic Migrations — Initial Schema | 🟢 | S039 | `feat/database` | First migration generated and applied, tables verified |
+| 041 | Repository Pattern — Data Access Layer | 🟢 | S040 | `feat/database` | PredictionRepository class for CRUD operations on predictions |
 
 ---
 
@@ -175,9 +175,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 042 | Persist Crop Predictions to Database | ⬜ | S041 | `feat/prediction-history` | CropService saves predictions via repository after inference |
-| 043 | History Query Endpoint with Pagination | ⬜ | S042 | `feat/prediction-history` | GET /api/v1/history with limit/offset/task_type filters working |
-| 044 | History API Testing | ⬜ | S043 | `feat/prediction-history` | Integration tests verify persistence and retrieval cycle |
+| 042 | Persist Crop Predictions to Database | 🟢 | S041 | `feat/prediction-history` | CropService saves predictions via repository after inference |
+| 043 | History Query Endpoint with Pagination | 🟢 | S042 | `feat/prediction-history` | GET /api/v1/history with limit/offset/task_type filters working |
+| 044 | History API Testing | 🟢 | S043 | `feat/prediction-history` | Integration tests verify persistence and retrieval cycle |
 
 ---
 

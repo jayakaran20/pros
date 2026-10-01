@@ -1,17 +1,18 @@
 import pickle
 import xgboost as xgb
-import pandas as pd
+import numpy as np
 import os
 
 class CropModelWrapper:
     _instance = None  # Singleton instance
 
     def __init__(self):
-        self.model = None
+        self.booster = None
         self.mean = None
         self.std = None
         self.crop_map = None
         self.is_loaded = False
+        self.feature_order = ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall']
 
     @classmethod
     def get_instance(cls):
@@ -20,51 +21,51 @@ class CropModelWrapper:
         return cls._instance
 
     def load_model(self, model_path: str, scaler_path: str):
-        """Loads the model and scaler into memory exactly once."""
+        """Loads the native XGBoost Booster model and scaler into memory."""
         if self.is_loaded:
             return
 
         if not os.path.exists(model_path) or not os.path.exists(scaler_path):
             raise FileNotFoundError(f"Model files not found at {model_path} or {scaler_path}")
 
-        # 1. Load the XGBoost JSON model
-        self.model = xgb.XGBClassifier()
-        self.model.load_model(model_path)
+        # 1. Load native XGBoost Booster without any sklearn wrapper dependency
+        self.booster = xgb.Booster()
+        self.booster.load_model(model_path)
 
         # 2. Load the preprocessing values (mean, std, crop dictionary)
         with open(scaler_path, 'rb') as f:
             preprocessing_data = pickle.load(f)
 
-        self.mean = pd.Series(preprocessing_data['mean'])
-        self.std = pd.Series(preprocessing_data['std'])
+        self.mean = preprocessing_data['mean']
+        self.std = preprocessing_data['std']
         self.crop_map = preprocessing_data['crop_map']
 
         self.is_loaded = True
-        print("[INFO] ML Model successfully loaded into memory!")
+        print("[INFO] Native XGBoost Booster successfully loaded into memory!")
 
     def predict(self, input_data: dict) -> tuple[str, float]:
-        """Runs the prediction on live data."""
+        """Runs the prediction using native XGBoost Booster DMatrix."""
         if not self.is_loaded:
             raise RuntimeError("Model is not loaded yet!")
 
-        # Convert the dictionary (from Pydantic) to a DataFrame
-        df = pd.DataFrame([input_data])
-        features = ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall']
-        
-        # Ensure column order is exactly as trained
-        df = df[features]
+        # Standardize features in exact training order: (x - mean) / std
+        scaled_features = [
+            (float(input_data[f]) - float(self.mean[f])) / float(self.std[f])
+            for f in self.feature_order
+        ]
 
-        # Apply the exact same scaling math we used in training
-        df_scaled = (df - self.mean) / self.std
+        # Construct DMatrix with exact feature names expected by the model
+        input_array = np.array([scaled_features], dtype=np.float32)
+        dmatrix = xgb.DMatrix(input_array, feature_names=self.feature_order)
 
-        # Predict the numerical class and get probability
-        pred_probabilities = self.model.predict_proba(df_scaled)[0]
-        predicted_class_idx = int(self.model.predict(df_scaled)[0])
+        # Native predict returns probabilities across all 22 classes
+        probabilities = self.booster.predict(dmatrix)[0]
+        predicted_class_idx = int(np.argmax(probabilities))
 
-        # Find the confidence score for the winning class
-        confidence = float(pred_probabilities[predicted_class_idx]) * 100
+        # Top probability percentage
+        confidence = float(probabilities[predicted_class_idx]) * 100
 
-        # Translate the number back to the human-readable crop name
+        # Translate integer class back to crop name
         crop_name = self.crop_map[predicted_class_idx]
 
         return crop_name, confidence
