@@ -1,11 +1,26 @@
 /**
  * Frontend TypeScript Contracts.
- * Mirrored directly from backend Pydantic v2 schemas.
+ * Mirrored directly from backend FastAPI Pydantic v2 schemas.
  */
 
 export interface CropPredictionRequest {
+  N: number;
+  P: number;
+  K: number;
+  temperature: number;
+  humidity: number;
+  ph: number;
+  rainfall: number;
+}
+
+export interface CropPredictionResponse {
+  recommended_crop: string;
+  confidence_score: number;
+}
+
+export interface CropDetail {
   nitrogen: number;
-  phosphorus: number;
+  phosphorous: number;
   potassium: number;
   temperature: number;
   humidity: number;
@@ -13,30 +28,18 @@ export interface CropPredictionRequest {
   rainfall: number;
 }
 
-export interface CropPredictionOption {
-  crop: string;
-  confidence: number;
+export interface PredictionHistoryItem {
+  id: number;
+  task_type: string;
+  recommended_crop: string;
+  confidence_score: number;
+  created_at: string;
+  crop_detail: CropDetail | null;
 }
 
-export interface CropPredictionResponse {
-  status: "success" | "error";
-  data: {
-    recommended_crop: string;
-    confidence: number;
-    alternative_options: CropPredictionOption[];
-    advisory_notes: string;
-    model_version: string;
-  };
-  timestamp: string;
-}
-
-export interface SystemHealthResponse {
-  status: "healthy" | "degraded" | "unhealthy";
-  database_connected: boolean;
-  loaded_models: {
-    crop_recommendation: boolean;
-    disease_detection: boolean;
-    yield_prediction: boolean;
-  };
-  version: string;
+export interface PredictionHistoryResponse {
+  total_records: number;
+  page_size: number;
+  skip: number;
+  records: PredictionHistoryItem[];
 }

@@ -187,10 +187,10 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 045 | React & TypeScript Fundamentals | ⬜ | S044 | `feat/frontend-foundation` | Concepts taught, project structure understood |
-| 046 | Application Layout & Navigation | ⬜ | S045 | `feat/frontend-foundation` | App shell with header, sidebar/nav, and react-router pages |
-| 047 | API Client Service Layer | ⬜ | S046 | `feat/frontend-foundation` | Axios/fetch service with base URL config, typed request functions |
-| 048 | TypeScript Interfaces Matching Backend Schemas | ⬜ | S047 | `feat/frontend-foundation` | TypeScript types mirroring all Pydantic schemas |
+| 045 | React & TypeScript Fundamentals | 🟢 | S044 | `feat/frontend-foundation` | Concepts taught, project structure understood |
+| 046 | Application Layout & Navigation | 🟢 | S045 | `feat/frontend-foundation` | App shell with header, sidebar/nav, and react-router pages |
+| 047 | API Client Service Layer | 🟢 | S047 | `feat/frontend-foundation` | Axios/fetch service with base URL config, typed request functions |
+| 048 | TypeScript Interfaces Matching Backend Schemas | 🟢 | S047 | `feat/frontend-foundation` | TypeScript types mirroring all Pydantic schemas |
 
 ---
 
@@ -200,9 +200,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 049 | Crop Recommendation Form Component | ⬜ | S048 | `feat/crop-ui` | Form with 7 validated input fields and submit button |
-| 050 | Loading, Error & Result States | ⬜ | S049 | `feat/crop-ui` | Loading spinner, error alerts, result card with confidence bars |
-| 051 | Prediction History Dashboard | ⬜ | S050 | `feat/crop-ui` | Table/list component displaying past predictions from API |
+| 049 | Crop Recommendation Form Component | 🟢 | S048 | `feat/crop-ui` | Form with 7 validated input fields and submit button |
+| 050 | Loading, Error & Result States | 🟢 | S049 | `feat/crop-ui` | Loading spinner, error alerts, result card with confidence bars |
+| 051 | Prediction History Dashboard | 🟢 | S050 | `feat/crop-ui` | Table/list component displaying past predictions from API |
 
 ---
 
@@ -212,9 +212,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 052 | CORS Configuration & Proxy Setup | ⬜ | S051 | `feat/integration` | Frontend can reach backend API without CORS errors |
-| 053 | End-to-End Integration Testing | ⬜ | S052 | `feat/integration` | Full user loop: Form → API → Model → DB → Browser verified |
-| 054 | MVP Checkpoint & Review | ⬜ | S053 | `feat/integration` | MVP feature-complete, all tests pass, demo walkthrough done |
+| 052 | CORS Configuration & Proxy Setup | 🟢 | S051 | `feat/integration` | Frontend can reach backend API without CORS errors |
+| 053 | End-to-End Integration Testing | 🟢 | S052 | `feat/integration` | Full user loop: Form → API → Model → DB → Browser verified |
+| 054 | MVP Checkpoint & Review | 🟢 | S053 | `feat/integration` | MVP feature-complete, all tests pass, demo walkthrough done |
 
 ---
 
