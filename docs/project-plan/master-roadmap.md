@@ -330,9 +330,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 080 | Testing Fundamentals & pytest Setup | ⬜ | S079 | `test/unit-tests` | pytest configured, conftest.py fixtures created |
-| 081 | Schema Validation Unit Tests | ⬜ | S080 | `test/unit-tests` | Tests for valid/invalid Pydantic schemas |
-| 082 | Service Layer Unit Tests | ⬜ | S081 | `test/unit-tests` | Tests for service orchestration with mocked dependencies |
+| 080 | Testing Fundamentals & pytest Setup | 🟢 | S079 | `test/unit-tests` | pytest configured, conftest.py fixtures created |
+| 081 | Schema Validation Unit Tests | 🟢 | S080 | `test/unit-tests` | Tests for valid/invalid Pydantic schemas |
+| 082 | Service Layer Unit Tests | 🟢 | S081 | `test/unit-tests` | Tests for service orchestration with mocked dependencies |
 
 ---
 
@@ -342,8 +342,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 083 | Database Integration Tests | ⬜ | S082 | `test/integration-tests` | Tests with real SQLite test DB, transaction rollback |
-| 084 | ML Pipeline Integration Tests | ⬜ | S083 | `test/integration-tests` | End-to-end inference tests with serialized artifacts |
+| 083 | Database Integration Tests | 🟢 | S082 | `test/integration-tests` | Tests with real SQLite test DB, transaction rollback |
+| 084 | ML Pipeline Integration Tests | 🟢 | S083 | `test/integration-tests` | End-to-end inference tests with serialized artifacts |
 
 ---
 
@@ -353,8 +353,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 085 | Endpoint Contract Tests | ⬜ | S084 | `test/api-tests` | All endpoints tested for correct status codes and response shapes |
-| 086 | Error Boundary & Edge Case Tests | ⬜ | S085 | `test/api-tests` | Boundary values, missing fields, malformed payloads tested |
+| 085 | Endpoint Contract Tests | 🟢 | S084 | `test/api-tests` | All endpoints tested for correct status codes and response shapes |
+| 086 | Error Boundary & Edge Case Tests | 🟢 | S085 | `test/api-tests` | Boundary values, missing fields, malformed payloads tested |
 
 ---
 
@@ -364,8 +364,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 087 | Vitest Setup & Component Testing | ⬜ | S086 | `test/frontend-tests` | Vitest configured, first component render test passing |
-| 088 | Form Validation & API Mock Tests | ⬜ | S087 | `test/frontend-tests` | Form submission tests with mocked API responses |
+| 087 | Vitest Setup & Component Testing | 🟢 | S086 | `test/frontend-tests` | Vitest configured, first component render test passing |
+| 088 | Form Validation & API Mock Tests | 🟢 | S087 | `test/frontend-tests` | Form submission tests with mocked API responses |
 
 ---
 
@@ -375,8 +375,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 089 | Model Determinism & Output Validation Tests | ⬜ | S088 | `test/ml-tests` | Fixed inputs produce consistent outputs, confidence ranges valid |
-| 090 | Latency Benchmark & Regression Tests | ⬜ | S089 | `test/ml-tests` | P95 latency < 50ms verified, performance regression gate set |
+| 089 | Model Determinism & Output Validation Tests | 🟢 | S088 | `test/ml-tests` | Fixed inputs produce consistent outputs, confidence ranges valid |
+| 090 | Latency Benchmark & Regression Tests | 🟢 | S089 | `test/ml-tests` | P95 latency < 50ms verified, performance regression gate set |
 
 ---
 
