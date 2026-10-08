@@ -6,10 +6,11 @@ from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-# Store the SQLite database file in the project's backend directory
+# Support configurable database URL for Docker volumes and cloud databases
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-DB_PATH = BASE_DIR / "cropfit.db"
-SQLALCHEMY_DATABASE_URL = f"sqlite:///{DB_PATH}"
+DEFAULT_DB_PATH = BASE_DIR / "cropfit.db"
+SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{DEFAULT_DB_PATH}")
+
 
 # check_same_thread=False is needed only for SQLite because FastAPI handles requests across multiple threads
 engine = create_engine(

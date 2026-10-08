@@ -386,8 +386,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 091 | Structured Logging Setup | ⬜ | S090 | `feat/logging` | Python logging configured with JSON formatters |
-| 092 | Error Handling Refinement | ⬜ | S091 | `feat/logging` | Custom exception classes, consistent error response format |
+| 091 | Structured Logging Setup | 🟢 | S090 | `feat/logging` | Python logging configured with JSON formatters |
+| 092 | Error Handling Refinement | 🟢 | S091 | `feat/logging` | Custom exception classes, consistent error response format |
 
 ---
 
@@ -397,8 +397,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 093 | Docker Concepts & Backend Dockerfile | ⬜ | S092 | `chore/docker` | Multi-stage backend Dockerfile builds and runs |
-| 094 | Frontend Dockerfile & Nginx | ⬜ | S093 | `chore/docker` | Frontend builds and serves via Nginx container |
+| 093 | Docker Concepts & Backend Dockerfile | 🟢 | S092 | `chore/docker` | Multi-stage backend Dockerfile builds and runs |
+| 094 | Frontend Dockerfile & Nginx | 🟢 | S093 | `chore/docker` | Frontend builds and serves via Nginx container |
 
 ---
 
@@ -408,8 +408,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 095 | Docker Compose — Multi-Container Setup | ⬜ | S094 | `chore/docker-compose` | docker compose up --build starts backend + frontend + postgres |
-| 096 | Container Networking & Health Checks | ⬜ | S095 | `chore/docker-compose` | Services communicate, health checks configured, volumes persist |
+| 095 | Docker Compose — Multi-Container Setup | 🟢 | S094 | `chore/docker-compose` | docker compose up --build starts backend + frontend + postgres |
+| 096 | Container Networking & Health Checks | 🟢 | S095 | `chore/docker-compose` | Services communicate, health checks configured, volumes persist |
 
 ---
 
@@ -505,9 +505,9 @@
 | Phase 28: API Testing | 2 (S085–S086) | ⬜ |
 | Phase 29: Frontend Testing | 2 (S087–S088) | ⬜ |
 | Phase 30: ML Testing | 2 (S089–S090) | ⬜ |
-| Phase 31: Logging & Errors | 2 (S091–S092) | ⬜ |
-| Phase 32: Docker | 2 (S093–S094) | ⬜ |
-| Phase 33: Docker Compose | 2 (S095–S096) | ⬜ |
+| Phase 31: Logging & Errors | 2 (S091–S092) | 🟢 |
+| Phase 32: Docker | 2 (S093–S094) | 🟢 |
+| Phase 33: Docker Compose | 2 (S095–S096) | 🟢 |
 | Phase 34: CI/CD | 2 (S097–S098) | ⬜ |
 | Phase 35: Deployment | 3 (S099–S101) | ⬜ |
 | Phase 36: Production Config | 2 (S102–S103) | ⬜ |
@@ -519,17 +519,17 @@
 
 ## Key Milestones
 
-| Milestone | Session | Description |
-|-----------|---------|-------------|
-| 🏁 Environment Ready | S004 | Dev environment fully configured, Git workflow practiced |
-| 🏁 Project Scaffolded | S008 | Complete directory structure matching Phase 0 architecture |
-| 🏁 Data Understood | S014 | EDA complete, feature boundaries documented |
-| 🏁 ML Pipeline Complete | S029 | Champion model serialized, inference engine tested |
-| 🏁 API Functional | S037 | Crop recommendation endpoint live and tested |
-| 🏁 Database Integrated | S044 | Predictions persisted and retrievable via history API |
-| 🏁 **MVP Complete** | **S054** | Full stack operational: UI → API → Model → DB → UI |
-| 🏁 Disease Detection V2 | S074 | Computer vision pipeline integrated end-to-end |
-| 🏁 Fully Tested | S090 | All test suites passing with ≥80% coverage |
-| 🏁 Containerized | S096 | Docker Compose brings up entire stack |
-| 🏁 Deployed | S103 | Application live on public URL |
-| 🏁 **Portfolio Complete** | **S109** | Tagged v1.0.0, documented, demo-ready |
+| Milestone | Session | Description | Status |
+|-----------|---------|-------------|--------|
+| 🏁 Environment Ready | S004 | Dev environment fully configured, Git workflow practiced | 🟢 |
+| 🏁 Project Scaffolded | S008 | Complete directory structure matching Phase 0 architecture | 🟢 |
+| 🏁 Data Understood | S014 | EDA complete, feature boundaries documented | 🟢 |
+| 🏁 ML Pipeline Complete | S029 | Champion model serialized, inference engine tested | 🟢 |
+| 🏁 API Functional | S037 | Crop recommendation endpoint live and tested | 🟢 |
+| 🏁 Database Integrated | S044 | Predictions persisted and retrievable via history API | 🟢 |
+| 🏁 **MVP Complete** | **S054** | Full stack operational: UI → API → Model → DB → UI | 🟢 |
+| 🏁 Disease Detection V2 | S074 | Computer vision pipeline integrated end-to-end | 🟢 |
+| 🏁 Fully Tested | S090 | All test suites passing with ≥80% coverage | 🟢 |
+| 🏁 Containerized | S096 | Docker Compose brings up entire stack | 🟢 |
+| 🏁 Deployed | S103 | Application live on public URL | ⬜ |
+| 🏁 **Portfolio Complete** | **S109** | Tagged v1.0.0, documented, demo-ready | ⬜ |

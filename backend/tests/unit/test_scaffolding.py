@@ -30,6 +30,22 @@ class TestScaffolding(unittest.TestCase):
         self.assertIn("/api/v1/predict", paths)
         self.assertIn("/api/v1/history", paths)
         self.assertIn("/api/v1/diseases/diagnose", paths)
+        self.assertIn("/api/v1/health", paths)
+
+    def test_root_endpoint(self):
+        response = self.client.get("/")
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertEqual(data.get("status"), "ok")
+
+    def test_health_check_endpoint(self):
+        response = self.client.get("/api/v1/health")
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertEqual(data.get("status"), "healthy")
+        self.assertTrue(data.get("crop_model_loaded"))
+        self.assertTrue(data.get("vision_engine_loaded"))
+
 
 if __name__ == "__main__":
     unittest.main()

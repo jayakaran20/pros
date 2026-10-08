@@ -1,0 +1,33 @@
+# Version control & cache
+.git
+.gitignore
+.dockerignore
+__pycache__
+*.py[cod]
+*$py.class
+*.pyd
+
+# Virtual environments
+.venv
+venv
+venv2
+env
+
+# Testing & Coverage
+.pytest_cache
+.ruff_cache
+.coverage
+htmlcov
+
+# Node & Frontend build artifacts
+node_modules
+frontend/node_modules
+frontend/dist
+.vscode
+.idea
+
+# Temporary and log files
+*.log
+*.tmp
+*.sqlite3
+cropfit.db
