@@ -2,6 +2,7 @@ import {
   CropPredictionRequest,
   CropPredictionResponse,
   PredictionHistoryResponse,
+  DiseaseDiagnosisResponse,
 } from '../types';
 
 const API_BASE_URL = 'http://127.0.0.1:8000/api/v1';
@@ -34,7 +35,6 @@ export async function predictCrop(
           : String(errorJson.detail);
       }
     } catch {
-      // Fallback to response status text
       errorDetail = response.statusText;
     }
     throw new ApiError(response.status, errorDetail);
@@ -45,17 +45,47 @@ export async function predictCrop(
 
 export async function getPredictionHistory(
   skip = 0,
-  limit = 20
+  limit = 20,
+  taskType?: string
 ): Promise<PredictionHistoryResponse> {
-  const response = await fetch(
-    `${API_BASE_URL}/history?skip=${skip}&limit=${limit}`,
-    {
-      method: 'GET',
-    }
-  );
+  let url = `${API_BASE_URL}/history?skip=${skip}&limit=${limit}`;
+  if (taskType) {
+    url += `&task_type=${taskType}`;
+  }
+
+  const response = await fetch(url, {
+    method: 'GET',
+  });
 
   if (!response.ok) {
     throw new ApiError(response.status, 'Failed to fetch prediction history');
+  }
+
+  return response.json();
+}
+
+export async function diagnoseDisease(
+  file: File
+): Promise<DiseaseDiagnosisResponse> {
+  const formData = new FormData();
+  formData.append('file', file);
+
+  const response = await fetch(`${API_BASE_URL}/diseases/diagnose`, {
+    method: 'POST',
+    body: formData,
+  });
+
+  if (!response.ok) {
+    let errorDetail = 'Failed to diagnose image';
+    try {
+      const errorJson = await response.json();
+      if (errorJson.detail) {
+        errorDetail = String(errorJson.detail);
+      }
+    } catch {
+      errorDetail = response.statusText;
+    }
+    throw new ApiError(response.status, errorDetail);
   }
 
   return response.json();

@@ -236,8 +236,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 058 | Disease Dataset Research & Acquisition | ⬜ | S054 | `feat/disease-dataset` | PlantVillage or equivalent dataset downloaded, license verified |
-| 059 | Dataset Inspection & Class Analysis | ⬜ | S058 | `feat/disease-dataset` | Class distribution, sample images visualized, imbalance assessed |
+| 058 | Disease Dataset Research & Acquisition | 🟢 | S054 | `feat/disease-dataset` | PlantVillage or equivalent dataset downloaded, license verified |
+| 059 | Dataset Inspection & Class Analysis | 🟢 | S058 | `feat/disease-dataset` | Class distribution, sample images visualized, imbalance assessed |
 
 ---
 
@@ -247,9 +247,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 060 | Image Preprocessing Concepts & Pipeline | ⬜ | S059 | `feat/disease-preprocessing` | Resize, normalize, tensor conversion pipeline implemented |
-| 061 | Data Augmentation Strategy | ⬜ | S060 | `feat/disease-preprocessing` | Training augmentations (flip, rotate, color jitter) applied |
-| 062 | Train/Validation/Test Split for Images | ⬜ | S061 | `feat/disease-preprocessing` | Stratified directory-based split, DataLoaders configured |
+| 060 | Image Preprocessing Concepts & Pipeline | 🟢 | S059 | `feat/disease-preprocessing` | Resize, normalize, tensor conversion pipeline implemented |
+| 061 | Data Augmentation Strategy | 🟢 | S060 | `feat/disease-preprocessing` | Training augmentations (flip, rotate, color jitter) applied |
+| 062 | Train/Validation/Test Split for Images | 🟢 | S061 | `feat/disease-preprocessing` | Stratified directory-based split, DataLoaders configured |
 
 ---
 
@@ -259,9 +259,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 063 | Transfer Learning Concepts | ⬜ | S062 | `feat/disease-model` | Concepts taught: pretrained features, frozen layers, fine-tuning |
-| 064 | MobileNetV3 Fine-Tuning Implementation | ⬜ | S063 | `feat/disease-model` | Model architecture defined, training loop implemented |
-| 065 | Training Execution & Loss Monitoring | ⬜ | S064 | `feat/disease-model` | Model trained, loss curves plotted, checkpoints saved |
+| 063 | Transfer Learning Concepts | 🟢 | S062 | `feat/disease-model` | Concepts taught: pretrained features, frozen layers, fine-tuning |
+| 064 | MobileNetV3 Fine-Tuning Implementation | 🟢 | S063 | `feat/disease-model` | Model architecture defined, training loop implemented |
+| 065 | Training Execution & Loss Monitoring | 🟢 | S064 | `feat/disease-model` | Model trained, loss curves plotted, checkpoints saved |
 
 ---
 
@@ -271,9 +271,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 066 | Classification Metrics on Test Set | ⬜ | S065 | `feat/disease-evaluation` | Accuracy, macro F1, per-class precision/recall computed |
-| 067 | Error Analysis & Confidence Thresholding | ⬜ | S066 | `feat/disease-evaluation` | Misclassifications analyzed, confidence threshold set |
-| 068 | Model Export & Vision Inference Engine | ⬜ | S067 | `feat/disease-evaluation` | .pth weights exported, VisionEngine wrapper class built |
+| 066 | Classification Metrics on Test Set | 🟢 | S065 | `feat/disease-evaluation` | Accuracy, macro F1, per-class precision/recall computed |
+| 067 | Error Analysis & Confidence Thresholding | 🟢 | S066 | `feat/disease-evaluation` | Misclassifications analyzed, confidence threshold set |
+| 068 | Model Export & Vision Inference Engine | 🟢 | S067 | `feat/disease-evaluation` | .pth weights exported, VisionEngine wrapper class built |
 
 ---
 
@@ -283,10 +283,10 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 069 | Multipart File Upload Handling | ⬜ | S068 | `feat/disease-api` | FastAPI UploadFile processing, temp file management |
-| 070 | Image Validation & Security | ⬜ | S069 | `feat/disease-api` | Magic byte validation, size limits, MIME type checks |
-| 071 | Disease Diagnosis Endpoint | ⬜ | S070 | `feat/disease-api` | POST /api/v1/diseases/diagnose returns diagnosis with confidence |
-| 072 | Disease API Testing | ⬜ | S071 | `feat/disease-api` | Tests: valid image → 200, invalid file → 415, oversized → 413 |
+| 069 | Multipart File Upload Handling | 🟢 | S068 | `feat/disease-api` | FastAPI UploadFile processing, temp file management |
+| 070 | Image Validation & Security | 🟢 | S070 | `feat/disease-api` | Magic byte validation, size limits, MIME type checks |
+| 071 | Disease Diagnosis Endpoint | 🟢 | S070 | `feat/disease-api` | POST /api/v1/diseases/diagnose returns diagnosis with confidence |
+| 072 | Disease API Testing | 🟢 | S071 | `feat/disease-api` | Tests: valid image → 200, invalid file → 415, oversized → 413 |
 
 ---
 
@@ -296,8 +296,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 073 | Image Upload Component (Drag & Drop) | ⬜ | S072 | `feat/disease-ui` | Drag-and-drop area with preview and file type validation |
-| 074 | Disease Diagnosis Result Display | ⬜ | S073 | `feat/disease-ui` | Result card showing disease, confidence, remedial actions |
+| 073 | Image Upload Component (Drag & Drop) | 🟢 | S072 | `feat/disease-ui` | Drag-and-drop area with preview and file type validation |
+| 074 | Disease Diagnosis Result Display | 🟢 | S073 | `feat/disease-ui` | Result card showing disease, confidence, remedial actions |
 
 ---
 

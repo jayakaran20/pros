@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Sprout, History, Sparkles, Layers, ShieldCheck } from 'lucide-react';
+import { Sprout, History, Sparkles, Layers, ShieldCheck, Stethoscope } from 'lucide-react';
 import { CropForm } from './components/CropForm';
+import { DiseaseDetection } from './components/DiseaseDetection';
 import { HistoryDashboard } from './components/HistoryDashboard';
 import './App.css';
 
 export const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'recommend' | 'history'>('recommend');
+  const [activeTab, setActiveTab] = useState<'recommend' | 'disease' | 'history'>('recommend');
   const [refreshTrigger, setRefreshTrigger] = useState<number>(0);
 
-  const handlePredictionSuccess = () => {
+  const handleActionSuccess = () => {
     // Increment trigger so history dashboard refreshes when visited
     setRefreshTrigger(prev => prev + 1);
   };
@@ -24,15 +25,15 @@ export const App: React.FC = () => {
           <div>
             <div className="brand-title">
               <span>Cropfit</span>
-              <span className="badge-version">v1.0 MVP</span>
+              <span className="badge-version">v2.0 Vision AI</span>
             </div>
-            <p className="brand-tagline">AI-Powered Agronomy & Soil Intelligence</p>
+            <p className="brand-tagline">AI-Powered Agronomy, Soil Analytics & Leaf Pathology</p>
           </div>
         </div>
 
         <div className="nav-status">
           <span className="status-dot" />
-          <span className="status-text">FastAPI + XGBoost Online</span>
+          <span className="status-text">FastAPI + XGBoost + Vision AI Online</span>
         </div>
       </header>
 
@@ -51,6 +52,15 @@ export const App: React.FC = () => {
 
           <button
             type="button"
+            className={`tab-btn ${activeTab === 'disease' ? 'active' : ''}`}
+            onClick={() => setActiveTab('disease')}
+          >
+            <Stethoscope size={18} />
+            <span>Leaf Disease Detection</span>
+          </button>
+
+          <button
+            type="button"
             className={`tab-btn ${activeTab === 'history' ? 'active' : ''}`}
             onClick={() => setActiveTab('history')}
           >
@@ -63,7 +73,11 @@ export const App: React.FC = () => {
         <div className="tab-content">
           {activeTab === 'recommend' ? (
             <div className="recommend-view">
-              <CropForm onPredictionSuccess={handlePredictionSuccess} />
+              <CropForm onPredictionSuccess={handleActionSuccess} />
+            </div>
+          ) : activeTab === 'disease' ? (
+            <div className="disease-view">
+              <DiseaseDetection onDiagnosisSuccess={handleActionSuccess} />
             </div>
           ) : (
             <div className="history-view">
@@ -83,12 +97,12 @@ export const App: React.FC = () => {
             <span>•</span>
             <span>FastAPI REST</span>
             <span>•</span>
-            <span>XGBoost Booster</span>
+            <span>XGBoost + MobileNet Vision</span>
             <span>•</span>
             <span>SQLite + SQLAlchemy</span>
           </div>
           <div className="footer-status">
-            <ShieldCheck size={14} className="text-emerald" /> End-to-End MVP Operational
+            <ShieldCheck size={14} className="text-emerald" /> Vision AI V2 Operational
           </div>
         </div>
       </footer>

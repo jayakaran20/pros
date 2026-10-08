@@ -1,0 +1,201 @@
+{
+  "Tomato___Early_Blight": {
+    "crop": "Tomato",
+    "condition": "Early Blight (Alternaria solani)",
+    "is_healthy": false,
+    "severity": "Medium",
+    "symptoms": [
+      "Concentric rings forming target-like dark spots on older leaves",
+      "Yellowing halo surrounding brown necrotic lesions",
+      "Defoliation starting from bottom leaves moving upward"
+    ],
+    "treatment_recommendations": [
+      "Apply copper-based fungicides or chlorothalonil at early detection",
+      "Remove and destroy infected lower foliage immediately",
+      "Prune bottom 12 inches of foliage to prevent soil splash"
+    ],
+    "prevention_tips": [
+      "Practice 3-year crop rotation away from solanaceous plants",
+      "Install drip irrigation rather than overhead sprinklers to keep foliage dry",
+      "Mulch base of plants with organic straw to shield soil pathogens"
+    ]
+  },
+  "Tomato___Late_Blight": {
+    "crop": "Tomato",
+    "condition": "Late Blight (Phytophthora infestans)",
+    "is_healthy": false,
+    "severity": "High",
+    "symptoms": [
+      "Large, irregular dark water-soaked lesions on leaves and stems",
+      "White fuzzy fungal growth on the underside of infected foliage in humid weather",
+      "Rapidly browning and rotting fruit"
+    ],
+    "treatment_recommendations": [
+      "Apply systemic bio-fungicides containing Bacillus subtilis",
+      "Spray mancozeb or fixed copper compounds immediately upon alert",
+      "Bag and burn heavily infected plants; do not compost"
+    ],
+    "prevention_tips": [
+      "Plant certified disease-free transplants and resistant cultivars",
+      "Ensure wide plant spacing (24-36 inches) for maximum airflow",
+      "Avoid planting potatoes and tomatoes in adjacent rows"
+    ]
+  },
+  "Tomato___Healthy": {
+    "crop": "Tomato",
+    "condition": "Healthy Foliage",
+    "is_healthy": true,
+    "severity": "None",
+    "symptoms": [
+      "Vibrant green, uniform leaf coloration",
+      "Strong turgid stem growth with zero necrotic spotting",
+      "No fungal mycelium or chlorotic halos observed"
+    ],
+    "treatment_recommendations": [
+      "No chemical or corrective treatments required",
+      "Maintain consistent balanced N-P-K fertilization"
+    ],
+    "prevention_tips": [
+      "Continue monitoring leaves weekly during humid periods",
+      "Maintain scheduled drip irrigation and soil moisture consistency"
+    ]
+  },
+  "Potato___Early_Blight": {
+    "crop": "Potato",
+    "condition": "Early Blight (Alternaria solani)",
+    "is_healthy": false,
+    "severity": "Medium",
+    "symptoms": [
+      "Small brown to black spots with concentric rings on lower leaves",
+      "Leaves turn yellow and dry up, reducing tuber yield"
+    ],
+    "treatment_recommendations": [
+      "Spray preventative azoxystrobin or copper fungicide",
+      "Ensure balanced soil potassium and nitrogen levels"
+    ],
+    "prevention_tips": [
+      "Harvest tubers during dry weather to prevent skin puncture infection",
+      "Rotate out of potato fields for minimum of 2 years"
+    ]
+  },
+  "Potato___Late_Blight": {
+    "crop": "Potato",
+    "condition": "Late Blight (Phytophthora infestans)",
+    "is_healthy": false,
+    "severity": "High",
+    "symptoms": [
+      "Dark brown to purplish-black water-soaked lesions",
+      "White fungal downy mold on leaf undersides under high humidity"
+    ],
+    "treatment_recommendations": [
+      "Spray cymoxanil or dimethomorph combined with protectant fungicide",
+      "Destroy vine tops 2 weeks before harvest if late blight is active"
+    ],
+    "prevention_tips": [
+      "Destroy cull piles of leftover tubers before spring planting",
+      "Ensure proper hilling to protect developing tubers under soil"
+    ]
+  },
+  "Potato___Healthy": {
+    "crop": "Potato",
+    "condition": "Healthy Foliage",
+    "is_healthy": true,
+    "severity": "None",
+    "symptoms": [
+      "Lush, undamaged foliage with uniform dark green pigmentation",
+      "Clean stems with vigorous flowering/canopy"
+    ],
+    "treatment_recommendations": [
+      "No treatments required",
+      "Continue standard foliar nutrient schedule"
+    ],
+    "prevention_tips": [
+      "Scout canopy weekly especially after persistent rainfall events"
+    ]
+  },
+  "Corn___Common_Rust": {
+    "crop": "Corn (Maize)",
+    "condition": "Common Rust (Puccinia sorghi)",
+    "is_healthy": false,
+    "severity": "Medium",
+    "symptoms": [
+      "Oval to elongate cinnamon-brown powdery pustules scattered on both leaf surfaces",
+      "Pustules turn brownish-black as the plant matures"
+    ],
+    "treatment_recommendations": [
+      "Apply triazole or strobilurin fungicides if rust appears before silking",
+      "Spray early in cool, damp conditions when infection spreads"
+    ],
+    "prevention_tips": [
+      "Plant rust-resistant hybrid corn seeds",
+      "Plant early in the season to avoid peak summer spore dissemination"
+    ]
+  },
+  "Corn___Healthy": {
+    "crop": "Corn (Maize)",
+    "condition": "Healthy Foliage",
+    "is_healthy": true,
+    "severity": "None",
+    "symptoms": [
+      "Long, clean green blade leaves without rust pustules or blight streaks",
+      "Robust stalk integrity"
+    ],
+    "treatment_recommendations": [
+      "No treatment required"
+    ],
+    "prevention_tips": [
+      "Maintain adequate nitrogen sidedressing at V6 growth stage"
+    ]
+  },
+  "Apple___Black_Rot": {
+    "crop": "Apple",
+    "condition": "Black Rot (Botryosphaeria obtusa)",
+    "is_healthy": false,
+    "severity": "High",
+    "symptoms": [
+      "Frog-eye leaf spots: purple margins with pale tan centers",
+      "Dark, sunken, rotting cankers on branches and blackened mummified fruit"
+    ],
+    "treatment_recommendations": [
+      "Prune out infected twigs and cankers at least 6 inches into healthy wood",
+      "Apply captan or thiophanate-methyl sprays from silver tip through petal fall"
+    ],
+    "prevention_tips": [
+      "Remove all mummified apples hanging from trees during winter dormancy",
+      "Disinfect pruning tools with 70% isopropyl alcohol between trees"
+    ]
+  },
+  "Apple___Cedar_Apple_Rust": {
+    "crop": "Apple",
+    "condition": "Cedar Apple Rust (Gymnosporangium juniperi-virginianae)",
+    "is_healthy": false,
+    "severity": "Medium",
+    "symptoms": [
+      "Bright yellow-orange or reddish spots on upper leaf surfaces",
+      "Small raised cluster cups forming on leaf undersides exuding orange spores"
+    ],
+    "treatment_recommendations": [
+      "Apply myclobutanil or sulfur sprays between pink blossom and petal fall",
+      "Remove nearby Eastern red cedar trees or trim cedar galls in radius"
+    ],
+    "prevention_tips": [
+      "Choose resistant apple cultivars such as Enterprise, Freedom, or Liberty"
+    ]
+  },
+  "Apple___Healthy": {
+    "crop": "Apple",
+    "condition": "Healthy Foliage",
+    "is_healthy": true,
+    "severity": "None",
+    "symptoms": [
+      "Symmetrical deep green leaves with crisp margins and glossy sheen",
+      "Clear fruit skin and bark free of fungal cankers"
+    ],
+    "treatment_recommendations": [
+      "No treatments required"
+    ],
+    "prevention_tips": [
+      "Conduct regular winter dormant oil sprays to discourage overwintering pests"
+    ]
+  }
+}

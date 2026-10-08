@@ -43,3 +43,14 @@ export interface PredictionHistoryResponse {
   skip: number;
   records: PredictionHistoryItem[];
 }
+
+export interface DiseaseDiagnosisResponse {
+  crop: string;
+  condition: string;
+  is_healthy: boolean;
+  confidence_score: number;
+  severity: 'None' | 'Low' | 'Medium' | 'High';
+  symptoms: string[];
+  treatment_recommendations: string[];
+  prevention_tips: string[];
+}
