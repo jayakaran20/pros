@@ -1,4 +1,7 @@
 import os
+# Disable compiled Cython C-extensions to bypass Windows Application Control policy locks
+os.environ["DISABLE_SQLALCHEMY_CEXT"] = "1"
+
 from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base

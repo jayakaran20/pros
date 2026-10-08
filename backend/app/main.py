@@ -1,5 +1,7 @@
 import sys
 import os
+os.environ["DISABLE_SQLALCHEMY_CEXT"] = "1"
+
 from pathlib import Path
 from contextlib import asynccontextmanager
 
