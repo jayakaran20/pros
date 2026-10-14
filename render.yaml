@@ -1,0 +1,43 @@
+services:
+  # =============================================================================
+  # BACKEND WEB SERVICE (FastAPI + ML Engine + Persistent Disk)
+  # =============================================================================
+  - type: web
+    name: cropfit-backend
+    runtime: docker
+    dockerfilePath: backend/Dockerfile
+    dockerContext: .
+    plan: free
+    region: oregon
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: LOG_LEVEL
+        value: INFO
+      - key: DATABASE_URL
+        value: sqlite:////app/data/cropfit.db
+      - key: MODELS_DIR
+        value: /app/ml_experiments/models
+    disk:
+      name: cropfit-db-data
+      mountPath: /app/data
+      sizeGB: 1
+
+  # =============================================================================
+  # FRONTEND WEB SERVICE (React + Vite + Nginx Reverse Proxy)
+  # =============================================================================
+  - type: web
+    name: cropfit-frontend
+    runtime: docker
+    dockerfilePath: frontend/Dockerfile
+    dockerContext: frontend
+    plan: free
+    region: oregon
+    healthCheckPath: /
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: cropfit-backend
+          property: host

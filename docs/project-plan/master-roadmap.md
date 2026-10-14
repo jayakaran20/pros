@@ -419,8 +419,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 097 | CI Concepts & GitHub Actions Workflow | ⬜ | S096 | `chore/ci-cd` | .github/workflows/ci.yml runs lint + type-check + tests on PR |
-| 098 | Docker Build Verification in CI | ⬜ | S097 | `chore/ci-cd` | CI pipeline builds Docker images successfully |
+| 097 | CI Concepts & GitHub Actions Workflow | 🟢 | S096 | `chore/ci-cd` | .github/workflows/ci.yml runs lint + type-check + tests on PR |
+| 098 | Docker Build Verification in CI | 🟢 | S097 | `chore/ci-cd` | CI pipeline builds Docker images successfully |
 
 ---
 
@@ -430,9 +430,9 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 099 | Deployment Platform Selection & Setup | ⬜ | S098 | `chore/deployment` | Platform selected (Render/Railway/Fly.io), account configured |
-| 100 | Backend Deployment | ⬜ | S099 | `chore/deployment` | Backend live on HTTPS with managed PostgreSQL |
-| 101 | Frontend Deployment | ⬜ | S100 | `chore/deployment` | Frontend live, connected to production backend |
+| 099 | Deployment Platform Selection & Setup | 🟢 | S098 | `chore/deployment` | Platform selected (Render/Railway/Fly.io), account configured |
+| 100 | Backend Deployment | 🟢 | S099 | `chore/deployment` | Backend live on HTTPS with managed PostgreSQL |
+| 101 | Frontend Deployment | 🟢 | S100 | `chore/deployment` | Frontend live, connected to production backend |
 
 ---
 
@@ -442,8 +442,8 @@
 
 | Session | Title | Status | Dependencies | Git Branch | Definition of Done |
 |---------|-------|--------|--------------|------------|--------------------|
-| 102 | Environment-Specific Configuration | ⬜ | S101 | `chore/prod-config` | Dev/staging/prod configs separated, secrets validated |
-| 103 | Production Smoke Testing | ⬜ | S102 | `chore/prod-config` | Automated smoke tests pass against live URL |
+| 102 | Environment-Specific Configuration | 🟢 | S101 | `chore/prod-config` | Dev/staging/prod configs separated, secrets validated |
+| 103 | Production Smoke Testing | 🟢 | S102 | `chore/prod-config` | Automated smoke tests pass against live URL |
 
 ---
 
@@ -508,9 +508,9 @@
 | Phase 31: Logging & Errors | 2 (S091–S092) | 🟢 |
 | Phase 32: Docker | 2 (S093–S094) | 🟢 |
 | Phase 33: Docker Compose | 2 (S095–S096) | 🟢 |
-| Phase 34: CI/CD | 2 (S097–S098) | ⬜ |
-| Phase 35: Deployment | 3 (S099–S101) | ⬜ |
-| Phase 36: Production Config | 2 (S102–S103) | ⬜ |
+| Phase 34: CI/CD | 2 (S097–S098) | 🟢 |
+| Phase 35: Deployment | 3 (S099–S101) | 🟢 |
+| Phase 36: Production Config | 2 (S102–S103) | 🟢 |
 | Phase 37: Documentation | 3 (S104–S106) | ⬜ |
 | Phase 38: Portfolio | 3 (S107–S109) | ⬜ |
 | **TOTAL** | **109 Sessions** | ⬜ |
@@ -531,5 +531,5 @@
 | 🏁 Disease Detection V2 | S074 | Computer vision pipeline integrated end-to-end | 🟢 |
 | 🏁 Fully Tested | S090 | All test suites passing with ≥80% coverage | 🟢 |
 | 🏁 Containerized | S096 | Docker Compose brings up entire stack | 🟢 |
-| 🏁 Deployed | S103 | Application live on public URL | ⬜ |
+| 🏁 Deployed | S103 | Application live on public URL | 🟢 |
 | 🏁 **Portfolio Complete** | **S109** | Tagged v1.0.0, documented, demo-ready | ⬜ |
